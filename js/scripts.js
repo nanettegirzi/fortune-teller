@@ -1,11 +1,13 @@
 //BACK - END LOGIC
 function getFortune (luckyEventsFortune, unluckyEventsFortune) {
-  if ((luckyEventsFortune === "found money") || (luckyEventsFortune === "leaf") && (unluckyEventsFortune === "mirror") || (unluckyEventsFortune === "ladder") || (unluckyEventsFortune === "lost money")){
+  if (unluckyEventsFortune > luckyEventsFortune){
     $("#mis-fortune").show();
 
-  } else if ((luckyEventsFortune === "rainbow") || (luckyEventsFortune === "friend") || (luckyEventsFortune === "found money") && (unluckyEventsFortune === "ghost") || (unluckyEventsFortune === "cat")){
+  } else if (luckyEventsFortune > unluckyEventsFortune){
     $("#fortune").show();
 
+  } else if (luckyEventsFortune === unluckyEventsFortune){
+      $("#neutral").show();
   } else {
       alert("Please select some check boxes to see your fortune.");
   }
@@ -38,3 +40,6 @@ $(document).ready(function(){
     $('#fortune-teller').hide();
   });
 });
+
+
+//number-values branch
