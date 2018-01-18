@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fortune Teller</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Fortune Teller Quiz</h2>
+      </div>
+      <form id="fortune-teller">
+        <div class="form-group">
+          <p>Select all of the lucky things that have happenend to you recently:</p>
+          <input type="checkbox" name="lucky-events" value="lottery"> Won the lottery(doesn't have to be megabucks)<br>
+          <input type="checkbox" name="lucky-events" value="leaf">Found a four-leaf clover.<br>
+          <input type="checkbox" name="lucky-events" value="rainbow">Saw a double rainbow.<br>
+          <input type="checkbox" name="lucky-events" value="friend">Caught up with an old friend after a long time.<br>
+          <input type="checkbox" name="lucky-events" value="bus">Got the last seat on the bus.<br>
+          <input type="checkbox" name="lucky-events" value="money">Found money on the street.<br>
+          <input type="checkbox" name="lucky-events" value="goal">Accomplished a long-term goal.<br>
+        </div>
+
+        <div class="form-group">
+          <p>Select all of the un-lucky things that have happenend to you recently:</p>
+          <input type="checkbox" name="unlucky-events" value="rain"> Got drenched in the rain.<br>
+          <input type="checkbox" name="unlucky-events" value="cat">A black cat crossed you path.<br>
+          <input type="checkbox" name="unlucky-events" value="ladder">Walked under a ladder.<br>
+          <input type="checkbox" name="unlucky-events" value="mirror">Broke a mirror (7 years of bad luck!).<br>
+          <input type="checkbox" name="unlucky-events" value="ghost">Saw a ghost.<br>
+          <input type="checkbox" name="unlucky-events" value="money">Lost money.<br>
+          <input type="checkbox" name="unlucky-events" value="pet">Lost your pet.<br>
+
+        </div>
+       <button type="submit">See your Fortune!</button>
+      </form>
+
+      <span id="lucky-responses">
+        <p><b>The following lucky fortune has been seen for you!</b></p>
+      </span>
+
+      <br>
+      <span id="unlucky-responses">
+        <p><b>The following unlucky fortune has been seen for you!</b></p>
+      </span>
+    </div>
+  </body>
+</html>
