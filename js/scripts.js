@@ -19,24 +19,30 @@ var unluckyEventsArray = [];
 var luckyEventsFortune;
 var unluckyEventsFortune;
 
+function getTotal (array) {
+  var total = 0;
+  array.forEach(function(arrayElement){
+    total += arrayElement;
+  });
+  return total;
+}
+
+
 //FRONT - END LOGIC
 $(document).ready(function(){
   $("form#fortune-teller").submit(function(event){
     event.preventDefault();
     $("input:checkbox[name=lucky-events]:checked").each(function(){
-      luckyEventsFortune = $(this).val();
-      console.log(luckyEventsFortune);
+      luckyEventsFortune = parseInt($(this).val());
       luckyEventsArray.push(luckyEventsFortune);
-      // $('#fortune').show();
     });
 
     $("input:checkbox[name=unlucky-events]:checked").each(function(){
-      unluckyEventsFortune = $(this).val();
-      console.log(unluckyEventsFortune);
+      unluckyEventsFortune = parseInt($(this).val());
       unluckyEventsArray.push(unluckyEventsFortune);
-      // $('#mis-fortune').show();
     });
-    getFortune(luckyEventsFortune, unluckyEventsFortune);
+    console.log(getTotal(luckyEventsArray));
+    getFortune(getTotal(luckyEventsArray), getTotal(unluckyEventsArray));
     $('#fortune-teller').hide();
   });
 });
